@@ -1,5 +1,5 @@
 import {useState, useMemo} from 'react';
-import './App.css';
+import './App1.css';
 
 const hardCalculate = (number) => {
   console.log('어려운 계산');
@@ -11,12 +11,13 @@ const easyCalculate = (number) => {
   return number+1
 }
 
-function App() {
+function App1() {
     const [hardNumber,setHardNumber]=useState(1);
     const [easyNumber,setEasyNumber]=useState(1);
     const hardSum = useMemo(()=>{
       return  hardCalculate(hardNumber)
     },[])
+    /* const hardSum = hardCalculate(hardNumber) */
     const easySum = easyCalculate(easyNumber)
   return (
     <div className="App">
@@ -31,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default App1;
